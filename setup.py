@@ -1,4 +1,8 @@
 from setuptools import setup
+import sys
+
+if sys.version_info.major == 2:
+    raise SystemError("Only Python 3 supported. (Python Version: {}".format('.'.join(sys.version_info)))
 
 setup(
     name='XCaliburMethodReader',
@@ -14,4 +18,6 @@ setup(
         XCaliburMethodReader=XCaliburMethodReader:main
     """,
     install_requires=['olefile', 'xmltodict'],
+    setup_requires=['pytest-runner'],
+    tests_require=['pytest'],
 )
