@@ -24,8 +24,12 @@ def main():
                 substream = 'Text' if args.to == 'text' else 'Data'
                 stream = f.openstream([args.stream, substream]).read()
 
-            fmt = 'utf8' if 'UTF-8' in stream.decode() else 'utf16'
-            data = stream.decode(fmt)
+            try:
+                data = stream.decode('utf16')
+            except UnicodeDecodeError:
+                data = stream.decode('utf8')
+
+            data = data[data.index('<?xml'):]
 
             if args.to in ['text', 'xml']:
                 output = data

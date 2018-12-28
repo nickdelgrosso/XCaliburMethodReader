@@ -3,7 +3,7 @@ from setuptools import setup
 setup(
     name='XCaliburMethodReader',
     py_modules=['XCaliburMethodReader'],
-    version='0.1.2',
+    version='0.1.3',
     url='https://github.com/nickdelgrosso/XCaliburMethodReader',
     license='GNU',
     author='Nicholas A. Del Grosso',
