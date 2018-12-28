@@ -12,5 +12,6 @@ setup(
     entry_points="""
         [console_scripts]
         XCaliburMethodReader=XCaliburMethodReader:main
-    """
+    """,
+    install_requires=open('requirements.txt').read().splitlines(keepends=False)
 )
