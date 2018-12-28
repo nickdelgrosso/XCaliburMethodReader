@@ -1,4 +1,4 @@
-# XCalibur Method File Reader
+# Thermo XCalibur Method File Reader
 
 A simple command-line program for mass spectrometry researchers that extracts and converts data from Thermo XCalibur Method (.meth) files.
 
