@@ -6,6 +6,9 @@ Uses the [olefile](https://olefile.readthedocs.io/en/latest/Howto.html) Python p
 
 ## Installation
 
+```
+pip install XCaliburMethodReader
+```
 
 ## Usage
 
