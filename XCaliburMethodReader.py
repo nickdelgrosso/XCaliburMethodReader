@@ -1,19 +1,18 @@
 #!/usr/bin/env python
-
 import sys
 import json
 import argparse
 import olefile
 import xmltodict
 
-def main():
+def main(args):
     parser = argparse.ArgumentParser(description='Extracts and converts data from Thermo XCalibur Method (.meth) files.')
     parser.add_argument('FILENAME', help='The Thermo XCaliber .meth file to read.')
     parser.add_argument('-s', '--stream', help='the data source you want to view (e.g. "Thermo Exactive")')
     parser.add_argument('--to', help='the data type to convert to.', choices=['text', 'xml', 'json'], default='text')
     parser.add_argument('--output', '-o', help='File to save data into, if desired.')
 
-    args = parser.parse_args()
+    args = parser.parse_args(args=args)
 
     with olefile.OleFileIO(args.FILENAME) as f:
 
@@ -29,7 +28,10 @@ def main():
             except UnicodeDecodeError:
                 data = stream.decode('utf8')
 
-            data = data[data.index('<?xml'):]
+
+            # Remove garbage characters at front of some strings if parsing xml data.
+            if args.to in ['xml', 'json']:
+                data = data[data.index('<?xml'):]
 
             if args.to in ['text', 'xml']:
                 output = data
@@ -45,4 +47,4 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    main(sys.argv[1:])
