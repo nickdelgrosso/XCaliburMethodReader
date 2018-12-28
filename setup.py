@@ -4,7 +4,7 @@ setup(
     name='XCaliburMethodReader',
     py_modules=['XCaliburMethodReader'],
     version='0.1',
-    url='',
+    url='https://github.com/nickdelgrosso/XCaliburMethodReader',
     license='GNU',
     author='Nicholas A. Del Grosso',
     author_email='delgrosso.nick@gmail.com',
