@@ -1,7 +1,8 @@
 # XCalibur Method File Reader
 
-A simple command-line program that extracts and converts data from Thermo XCalibur Method (.meth) files.
+A simple command-line program for mass spectrometry researchers that extracts and converts data from Thermo XCalibur Method (.meth) files.
 
+Uses the [olefile](https://olefile.readthedocs.io/en/latest/Howto.html) Python package to extract the data.
 
 ## Installation
 
@@ -94,3 +95,7 @@ Save output to a file:
 >>> XCaliburMethodReader HelaStandard120.meth -s "Thermo Exactive" --to json -o myfile.json
 ```
 
+## Todo
+
+  - Get the header stream to read correctly
+  - Provide a metadata extractor  
