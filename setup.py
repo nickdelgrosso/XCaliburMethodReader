@@ -3,7 +3,7 @@ from setuptools import setup
 setup(
     name='XCaliburMethodReader',
     py_modules=['XCaliburMethodReader'],
-    version='0.1',
+    version='0.1.1',
     url='https://github.com/nickdelgrosso/XCaliburMethodReader',
     license='GNU',
     author='Nicholas A. Del Grosso',
@@ -13,5 +13,5 @@ setup(
         [console_scripts]
         XCaliburMethodReader=XCaliburMethodReader:main
     """,
-    install_requires=open('requirements.txt').read().splitlines(keepends=False)
+    install_requires=['olefile', 'xmltodict'],
 )
