@@ -1,7 +1,6 @@
 # Thermo XCalibur Method File Reader
 
 [![Build Status](https://travis-ci.org/nickdelgrosso/XCaliburMethodReader.svg?branch=master)](https://travis-ci.org/nickdelgrosso/XCaliburMethodReader)
-
 [![Coverage Status](https://coveralls.io/repos/github/nickdelgrosso/XCaliburMethodReader/badge.svg?branch=master)](https://coveralls.io/github/nickdelgrosso/XCaliburMethodReader?branch=master)
 
 A simple command-line program for mass spectrometry researchers that extracts and converts data from Thermo XCalibur Method (.meth) files.
