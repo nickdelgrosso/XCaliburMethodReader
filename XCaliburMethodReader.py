@@ -6,7 +6,8 @@ import olefile
 import xmltodict
 
 
-def main(args):
+def main(args=sys.argv[1:]):
+
     parser = argparse.ArgumentParser(description='Extracts and converts data from Thermo XCalibur Method (.meth) files.')
     parser.add_argument('FILENAME', help='The Thermo XCaliber .meth file to read.')
     parser.add_argument('-s', '--stream', help='the data source you want to view (e.g. "Thermo Exactive")')
