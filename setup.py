@@ -17,7 +17,7 @@ setup(
         [console_scripts]
         XCaliburMethodReader=XCaliburMethodReader:main
     """,
-    install_requires=['olefile', 'xmltodict'],
+    install_requires=['olefile', 'xmltodict', 'numpy', 'pandas'],
     setup_requires=['pytest-runner'],
     tests_require=['pytest'],
 )
