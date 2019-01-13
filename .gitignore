@@ -4,3 +4,4 @@ venv
 dist
 data
 build
+.ipynb_checkpoints
