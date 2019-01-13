@@ -7,7 +7,7 @@ if sys.version_info.major == 2:
 setup(
     name='XCaliburMethodReader',
     py_modules=['XCaliburMethodReader'],
-    version='0.1.5',
+    version='0.2.0',
     url='https://github.com/nickdelgrosso/XCaliburMethodReader',
     license='GNU',
     author='Nicholas A. Del Grosso',
